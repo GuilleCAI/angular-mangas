@@ -1,0 +1,11 @@
+<div class="modal is-active" *ngIf="modelo.imagen != -1">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div id="slick">
+      <div class="column img" *ngFor="let imagen of capitulos[modelo.posicion].imagenes; index as indice;last as isLast">
+        <img src="{{imagen.url}}" alt="" style="max-height: calc(100vh - 75px); margin: 0 auto" *ngIf="imagen.incluir" />
+      </div>
+    </div>
+  </div>
+  <button type="button" class="modal-close is-large" aria-label="close" (click)="cerrarModal()"></button>
+</div>

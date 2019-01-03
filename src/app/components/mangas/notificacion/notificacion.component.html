@@ -1,0 +1,17 @@
+<ng-container *ngIf="pendientes.length != 0">
+  <article class="message is-info">
+    <div class="message-header">
+      <div>
+        Generando {{pendientes[0].manga.nombre}} cap&iacute;tulo {{pendientes[0].numero}}
+        <span *ngIf="(pendientes.length - 1) == 1"> (1 pendiente)</span>
+        <span *ngIf="(pendientes.length - 1) > 1"> ({{pendientes.length - 1}} pendientes)</span>
+      </div>
+    </div>
+    <div class="message-body" *ngIf="pendientes.length > 1">
+      <progress class="progress is-success" value="{{pendiente.actual}}" max="{{pendiente.total}}">
+        {{(pendiente.actual / pendiente.total) * 100}}%
+      </progress>
+    </div>
+  </article>
+  <div></div>
+</ng-container>

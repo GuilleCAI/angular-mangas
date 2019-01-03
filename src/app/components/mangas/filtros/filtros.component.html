@@ -1,0 +1,60 @@
+<div class="columns">
+  <div class="column is-5">
+    <div class="field is-horizontal">
+      <div class="field-label is-normal has-text-left">
+        <label class="label">Manga</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <div class="select">
+              <select [(ngModel)]="modelo.idManga">
+                <option *ngFor="let manga of mangas" value="{{manga.id}}">{{manga.tipo.nombre}} {{manga.nombre}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-2">
+    <div class="field is-horizontal">
+      <div class="field-label is-normal has-text-left">
+        <label class="label">Inicio</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input" placeholder="0" [(ngModel)]="modelo.inicio" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column is-2">
+    <div class="field is-horizontal">
+      <div class="field-label is-normal has-text-left">
+        <label class="label">Fin</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input" placeholder="0" [(ngModel)]="modelo.fin" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column is-2">
+    <div class="field">
+      <div class="control">
+        <button type="button" class="button is-info" (click)="buscar()">
+          <span class="icon"><fa-icon icon="search"></fa-icon></span>
+          <span>Buscar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

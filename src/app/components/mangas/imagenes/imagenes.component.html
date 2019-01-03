@@ -1,0 +1,10 @@
+<div style="clear: both" *ngIf="capitulo.visible">
+    <div style="width: 115px; height: 170px; float: left;" *ngFor="let imagen of capitulo.imagenes;index as indice;last as isLast">
+        <input type="checkbox" style="position: absolute" [(ngModel)]="imagen.incluir" />
+        <a href="#" (click)="abrirModal(indice)"><img src="{{imagen.url}}" height="100%" width="100%" title="{{indice+1}}" /></a>
+    </div>
+    <button id="generar{{indice}}}" class="button is-success" style="margin-left: 5px" (click)="generar(false)">
+        <span class="icon"><fa-icon icon="cloud-download-alt"></fa-icon></span>
+        <span>Generar</span>
+    </button>
+</div>

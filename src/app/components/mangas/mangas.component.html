@@ -1,0 +1,9 @@
+<div class="container">
+  <h2 class="title is-3">Generador de mangas</h2>
+  <app-notificacion [pendientes]=pendientes [pendiente]=pendiente></app-notificacion>
+  <div class="content">
+    <app-filtros [modelo]=modelo [mangas]=mangas [manga]=manga [capitulos]=capitulos></app-filtros>
+    <app-capitulos [modelo]=modelo [manga]=manga [capitulos]=capitulos [pendientes]=pendientes [pendiente]=pendiente></app-capitulos>
+  </div>
+  <app-modal [modelo]=modelo [capitulos]=capitulos></app-modal>
+</div>

@@ -1,0 +1,27 @@
+<ng-container *ngIf="capitulos.length > 0">
+  <div class="columns" style="clear: both">
+    <div class="column">
+      <div class="field is-grouped">
+        <label class="label">{{manga.nombre}}</label>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngFor="let capitulo of capitulos;index as indice;last as isLast">
+    <div class="columns" style="clear: both">
+      <div class="column">
+        <div class="field is-grouped">
+          <label class="control label">Cap&iacute;tulo {{capitulo.numero}}</label>
+          <button id="ver{{indice}}" class="button is-link" *ngIf="!capitulo.visible" (click)="ver(indice)">
+            <span class="icon"><fa-icon icon="eye"></fa-icon></span>
+            <span>Ver</span>
+          </button>
+          <button id="ocultar{{indice}}" class="button is-danger" *ngIf="capitulo.visible" (click)="capitulo.visible=false">
+            <span class="icon"><fa-icon icon="eye-slash"></fa-icon></span>
+            <span>Ocultar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <app-imagenes [modelo]=modelo [capitulo]=capitulo [pendientes]=pendientes [pendiente]=pendiente></app-imagenes>
+  </ng-container>
+</ng-container>

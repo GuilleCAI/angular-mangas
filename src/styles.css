@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 5px;
+}
+
+.control.label {
+    padding-top: calc(0.375em - 1px);
+    padding-bottom: calc(0.375em - 1px);
+}
+
+.button>span:last-child {
+    margin-top: -3px;
+}
+
+.slick-slider {
+    display: flex !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.slick-track {
+    display: flex !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
